@@ -32,7 +32,7 @@
 
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>    
@@ -45,7 +45,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close button" data-dismiss="modal">
                         &times; 
                     </button>
                 </div>
@@ -54,11 +54,11 @@
                         <div class="form-row">
                             <div class="form-group col-sm-4">
                                 <label class="sr-only" for="emailid">Email Address</label>
-                                <input type="email" id="emailid" class="form-control form-control-sm mr-1" placeholder="Enter email">
+                                <input type="email" id="emailid" class="form-control form-control-sm mr-1" placeholder="Enter email" autocomplete="off">
                             </div>
                             <div class="form-group col-sm-4">
                                 <label class="sr-only" for="passwd">Password</label>
-                                <input type="password" id="passwd" class="form-control form-control-sm mr-1" placeholder="Password">
+                                <input type="password" id="passwd" class="form-control form-control-sm mr-1" placeholder="Password" autocomplete="off">
                             </div>
                             <div class="col-sm-auto">
                                 <div class="form-check">
@@ -95,7 +95,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4>Reserve a Table</h4>
-                    <button class="close" data-dismiss="modal">&times;</button>
+                    <button class="close button" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form id="reserve">
@@ -157,7 +157,7 @@
                     <img src="./img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a data-toggle="modal" data-target="#reserveModal" href="#reserveModal" class="btn btn-block btn-sm btn-warning bg-warning" role="button">Reserve Table</a>
+                    <a class="btn btn-block btn-sm btn-warning bg-warning" role="button" id="reserveButton" style="color: black;">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -349,6 +349,18 @@
             });
         });
     </script>
+    <!-- Assignment4 Javascript Code-->
+    <script>
+        $(document).ready(function() {
+            $('#loginButton').click( function() {
+                $('#loginModal').modal('show');
+            });
+            $('#reserveButton').click(function() {
+                $('#reserveModal').modal('show');
+            });
+        });
+    </script>
+
 </body>
 
 </html>
